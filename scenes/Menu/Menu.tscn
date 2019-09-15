@@ -1,0 +1,340 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://scenes/Menu/Menu.gd" type="Script" id=1]
+[ext_resource path="res://assets/background/bg_gradient.png" type="Texture" id=2]
+[ext_resource path="res://assets/background/bg_ground.png" type="Texture" id=3]
+[ext_resource path="res://assets/background/bg_cloud-01.png" type="Texture" id=4]
+[ext_resource path="res://assets/background/bg_cloud-02.png" type="Texture" id=5]
+[ext_resource path="res://assets/gui/obj_bubbly.png" type="Texture" id=6]
+[ext_resource path="res://assets/gui/gui_title.png" type="Texture" id=7]
+[ext_resource path="res://assets/gui/gui_button-play.png" type="Texture" id=8]
+[ext_resource path="res://assets/gui/obj_fish.png" type="Texture" id=9]
+[ext_resource path="res://scenes/Gui/Bubbles/Bubbles.tscn" type="PackedScene" id=10]
+
+[sub_resource type="Animation" id=1]
+resource_name = "show_fishes"
+length = 7.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("obj_fish:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 1.5, 2, 2.5, 3, 3.5, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -75.0, -51.8741, -17.8833, 7.84856, 40.0756, 65.7746, 42.6308, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("obj_fish:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 5.5, 6, 6.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 231, 1357 ), Vector2( 251, 1229 ), Vector2( 273, 1159 ), Vector2( 300, 1117 ), Vector2( 321, 1107 ), Vector2( 351, 1130 ), Vector2( 373, 1169 ), Vector2( 383, 1223 ), Vector2( 399, 1223 ), Vector2( 425.463, 1236.97 ), Vector2( 458.542, 1225.94 ), Vector2( 448.986, 1252.4 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("obj_fish2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 486.851, 1355.03 ), Vector2( 468.932, 1222.26 ), Vector2( 438.795, 1138.37 ), Vector2( 408.658, 1095.2 ), Vector2( 374.449, 1084.61 ), Vector2( 341.054, 1132.67 ), Vector2( 312.547, 1233.67 ), Vector2( 293.813, 1232.04 ), Vector2( 277.641, 1248.94 ), Vector2( 246.032, 1236.45 ), Vector2( 273.23, 1240.12 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("obj_fish2:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 83.8123, 74.9393, 65.8546, 43.2127, -33.1754, -58.4865, -45.6923, 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("bg_cloud-02:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 2.5, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 965.636, 722.341 ), Vector2( 965.636, 722.341 ), Vector2( 611.671, 722.341 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("bg_cloud-01:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 2.5, 4.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -349.871, 457.454 ), Vector2( -349.871, 457.454 ), Vector2( 4.0946, 457.454 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("obj_bubbly:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("obj_fish:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 6, 6.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( -1, 1 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("obj_fish2:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 6, 6.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1, 1 ), Vector2( -1, 1 ), Vector2( 1, 1 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("tb_play:rect_scale")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 4, 4.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.1, 0.1 ), Vector2( 1, 1 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("gui_title:scale")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 4, 4.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.1, 0.1 ), Vector2( 1, 1 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("gui_title:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("tb_play:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("obj_bubbly:scale")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 4 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("obj_bubbly:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0.0306387 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 359.613, 562.971 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "start_game"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("tb_play:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("gui_title:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("bg_cloud-01:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 4.0946, 457.454 ), Vector2( -335.216, 459.212 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("bg_cloud-02:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 611.671, 722.341 ), Vector2( 954.498, 736.406 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("obj_bubbly:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 1, 1.5, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 359.236, 574.531 ), Vector2( 365.388, 385.881 ), Vector2( 348.983, 1456.27 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("obj_bubbly:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 1, 1.5, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.9, 0.9 ), Vector2( 0.2, 0.2 ) ]
+}
+
+[node name="Menu" type="Control"]
+editor/display_folded = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="bg_gradient" type="Sprite" parent="."]
+position = Vector2( 0, -5495 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="bg_ground" type="Sprite" parent="."]
+position = Vector2( 0, 911 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="bg_cloud-01" type="Sprite" parent="."]
+position = Vector2( 4.0946, 457.454 )
+texture = ExtResource( 4 )
+
+[node name="bg_cloud-02" type="Sprite" parent="."]
+position = Vector2( 611.671, 722.341 )
+texture = ExtResource( 5 )
+
+[node name="obj_bubbly" type="Sprite" parent="."]
+position = Vector2( 359.613, 562.971 )
+scale = Vector2( 0.993872, 0.993872 )
+texture = ExtResource( 6 )
+
+[node name="gui_title" type="Sprite" parent="."]
+visible = false
+position = Vector2( 371.539, 239.123 )
+texture = ExtResource( 7 )
+
+[node name="tb_play" type="TextureButton" parent="."]
+visible = false
+margin_left = 81.8168
+margin_top = 822.064
+margin_right = 629.817
+margin_bottom = 1022.06
+texture_normal = ExtResource( 8 )
+
+[node name="Anim_GUI" type="AnimationPlayer" parent="."]
+playback_speed = 3.0
+anims/show_fishes = SubResource( 1 )
+anims/start_game = SubResource( 2 )
+
+[node name="obj_fish" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 448.986, 1252.4 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 9 )
+
+[node name="Bubbles" parent="obj_fish" instance=ExtResource( 10 )]
+position = Vector2( 36.8869, -17.6735 )
+bubble_type = "BIG"
+
+[node name="obj_fish2" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 273.23, 1240.12 )
+texture = ExtResource( 9 )
+
+[node name="Bubbles" parent="obj_fish2" instance=ExtResource( 10 )]
+position = Vector2( 23, -12 )
+bubble_type = "SMALL"
+[connection signal="pressed" from="tb_play" to="." method="_on_tb_play_pressed"]
+[connection signal="animation_finished" from="Anim_GUI" to="." method="_on_Anim_GUI_animation_finished"]
