@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/Obstacles/Ball/Ball.gd" type="Script" id=1]
+[ext_resource path="res://assets/obstacles/obstacle_ball.png" type="Texture" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 70.0
+
+[node name="Ball" type="RigidBody2D"]
+angular_velocity = 30.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )

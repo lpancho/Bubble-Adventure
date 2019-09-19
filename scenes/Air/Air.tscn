@@ -1,14 +1,11 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://scenes/Bubble/Bubble.gd" type="Script" id=1]
+[ext_resource path="res://scenes/Air/Air.gd" type="Script" id=1]
 [ext_resource path="res://assets/bubbly/obj_bubble.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
 
-[node name="Bubble" type="RigidBody2D"]
-mode = 2
-mass = 0.01
-gravity_scale = -1.0
+[node name="Air" type="Area2D"]
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -18,12 +15,5 @@ __meta__ = {
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 shape = SubResource( 1 )
-
-[node name="Camera2D" type="Camera2D" parent="."]
-current = true
-limit_left = 0
-limit_top = -6775
-limit_right = 720
-limit_bottom = 0
+[connection signal="body_entered" from="." to="." method="_on_Air_body_entered"]

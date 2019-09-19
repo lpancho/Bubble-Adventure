@@ -21,3 +21,13 @@ margin_bottom = 29.2587
 rect_scale = Vector2( 2, 2 )
 text = "0"
 align = 2
+
+[node name="Distance" type="Label" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -224.255
+margin_top = 14.4401
+margin_right = -164.255
+margin_bottom = 28.4401
+rect_scale = Vector2( 2, 2 )
+text = "Distance:"
