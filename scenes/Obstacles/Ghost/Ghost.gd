@@ -10,11 +10,11 @@ func _ready():
 	if flipped:
 		flippedAt = -51
 		direction = Vector2(1,0)
-		sprite.flip_h = false
+		sprite.flip_h = true
 	else:
 		flippedAt = 721
 		direction = Vector2(-1,0)
-		sprite.flip_h = true
+		sprite.flip_h = false
 
 func _process(delta):
 	position += direction * speed * delta

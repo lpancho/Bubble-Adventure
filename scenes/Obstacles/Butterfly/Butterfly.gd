@@ -24,8 +24,8 @@ func _process(delta):
 	pass
 
 func _on_Butterfly_body_entered(body):
-	if body is Player:
-		body.dead()
+#	if body is Player:
+#		body.dead()
 	pass # Replace with function body.
 
 func flip():

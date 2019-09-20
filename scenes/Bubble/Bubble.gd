@@ -3,6 +3,7 @@ class_name Player
 
 onready var sprite = $Sprite
 onready var collision = $CollisionShape2D
+onready var sfx_increase_size = $sfx_increase_size
 
 # VELOCITY
 const X_VECTOR = Vector2(-50, 50)
@@ -36,6 +37,7 @@ func increase_size():
 	sprite.scale = sprite.scale + Vector2(.1,.1)
 	collision.shape.radius = 10 * sprite.scale.x
 	emit_signal("update_air")
+	sfx_increase_size.play()
 	pass
 
 func dead():

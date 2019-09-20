@@ -1,11 +1,19 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scenes/Stages/Stage1/Stage1.gd" type="Script" id=1]
 [ext_resource path="res://assets/background/bg_gradient.png" type="Texture" id=2]
 [ext_resource path="res://assets/background/bg_ground.png" type="Texture" id=3]
 [ext_resource path="res://scenes/Gui/GUI_Stage/GUI_Stage.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/Bubble/Bubble.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/Air/Air.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/Obstacles/Butterfly/Butterfly.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/Obstacles/Bird/Bird.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/Obstacles/Plane/Plane.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/Obstacles/Shooting_Star/Shooting_Star.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/Obstacles/Ghost/Ghost.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/Obstacles/Ufo/Ufo.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/Spawner/Spawner.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenes/Air/Air.tscn" type="PackedScene" id=13]
+[ext_resource path="res://assets/music-sfx/Pachelbel - Canon In D Major - Best version.ogg" type="AudioStream" id=14]
 
 [node name="Stage1" type="Node2D"]
 script = ExtResource( 1 )
@@ -14,11 +22,17 @@ script = ExtResource( 1 )
 position = Vector2( 0, -6775 )
 texture = ExtResource( 2 )
 centered = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="bg_ground" type="Sprite" parent="."]
 position = Vector2( 0, -369 )
 texture = ExtResource( 3 )
 centered = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="GUI_Stage" parent="." instance=ExtResource( 4 )]
 
@@ -27,22 +41,292 @@ position = Vector2( 350, -10 )
 
 [node name="Obstacles" type="Node2D" parent="."]
 
+[node name="Butterfly" parent="Obstacles" instance=ExtResource( 6 )]
+position = Vector2( 933.923, -678.109 )
+
+[node name="Butterfly2" parent="Obstacles" instance=ExtResource( 6 )]
+position = Vector2( 829.536, -869.381 )
+
+[node name="Butterfly3" parent="Obstacles" instance=ExtResource( 6 )]
+position = Vector2( 758.754, -358.659 )
+
+[node name="Bird" parent="Obstacles" instance=ExtResource( 7 )]
+position = Vector2( -69.9582, -1133.4 )
+
+[node name="Bird2" parent="Obstacles" instance=ExtResource( 7 )]
+position = Vector2( 810.25, -1335.29 )
+
+[node name="Plane" parent="Obstacles" instance=ExtResource( 8 )]
+position = Vector2( 886.695, -3331.47 )
+
+[node name="Plane2" parent="Obstacles" instance=ExtResource( 8 )]
+position = Vector2( 13.8572, -3062.36 )
+
+[node name="Shooting_Star" parent="Obstacles" instance=ExtResource( 9 )]
+position = Vector2( 1425.05, -2613.92 )
+
+[node name="Ghost" parent="Obstacles" instance=ExtResource( 10 )]
+position = Vector2( 753.138, -4518.83 )
+
+[node name="Ghost2" parent="Obstacles" instance=ExtResource( 10 )]
+position = Vector2( 533.23, -4248.45 )
+
+[node name="Ghost3" parent="Obstacles" instance=ExtResource( 10 )]
+position = Vector2( 342.162, -3949.23 )
+
+[node name="Ufo" parent="Obstacles" instance=ExtResource( 11 )]
+position = Vector2( 277.51, -5363.49 )
+
+[node name="Ufo3" parent="Obstacles" instance=ExtResource( 11 )]
+position = Vector2( 453.078, -4956.17 )
+
+[node name="Ufo2" parent="Obstacles" instance=ExtResource( 11 )]
+position = Vector2( 179.193, -5145.78 )
+
+[node name="Spawner" parent="Obstacles" instance=ExtResource( 12 )]
+position = Vector2( 751.103, -1742.06 )
+
 [node name="Airs" type="Node2D" parent="."]
 
-[node name="Air" parent="Airs" instance=ExtResource( 6 )]
+[node name="Air" parent="Airs" instance=ExtResource( 13 )]
 position = Vector2( 356.175, -221.368 )
 
-[node name="Air2" parent="Airs" instance=ExtResource( 6 )]
+[node name="Air15" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 392.226, -1865.27 )
+
+[node name="Air7" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 248.024, -1140.66 )
+
+[node name="Air11" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 373.497, -2474.52 )
+
+[node name="Air67" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 318.187, -2581.89 )
+
+[node name="Air70" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 419.047, -3180.54 )
+
+[node name="Air75" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 297.913, -1624.44 )
+
+[node name="Air21" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 437.425, -2981.2 )
+
+[node name="Air25" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 330.637, -3487.87 )
+
+[node name="Air32" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 478.322, -3478.78 )
+
+[node name="Air37" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 271.563, -4369.44 )
+
+[node name="Air40" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 271.563, -4367.17 )
+
+[node name="Air47" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 457.873, -4633 )
+
+[node name="Air51" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 260.202, -4705.71 )
+
+[node name="Air55" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 416.976, -5235.1 )
+
+[node name="Air57" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 321.549, -5598.63 )
+
+[node name="Air61" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 301.1, -6030.33 )
+
+[node name="Air2" parent="Airs" instance=ExtResource( 13 )]
 position = Vector2( 230.553, -858.613 )
 
-[node name="Air3" parent="Airs" instance=ExtResource( 6 )]
+[node name="Air16" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 204.615, -2268.19 )
+
+[node name="Air68" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 149.304, -2375.55 )
+
+[node name="Air69" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 250.164, -2974.21 )
+
+[node name="Air74" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 129.03, -1418.1 )
+
+[node name="Air20" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 268.542, -2774.86 )
+
+[node name="Air26" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 161.754, -3281.53 )
+
+[node name="Air29" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 309.439, -3272.45 )
+
+[node name="Air35" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 102.68, -4163.1 )
+
+[node name="Air42" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 102.68, -4163.1 )
+
+[node name="Air8" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 157.749, -1745.46 )
+
+[node name="Air64" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 102.439, -1852.82 )
+
+[node name="Air73" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 203.299, -2451.48 )
+
+[node name="Air76" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 82.1647, -895.369 )
+
+[node name="Air12" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 162.057, -2689.98 )
+
+[node name="Air22" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 232.491, -3196.65 )
+
+[node name="Air27" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 125.703, -3703.33 )
+
+[node name="Air30" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 273.389, -3694.24 )
+
+[node name="Air36" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 66.6294, -4584.89 )
+
+[node name="Air43" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 66.6294, -4582.62 )
+
+[node name="Air46" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 252.94, -4848.46 )
+
+[node name="Air50" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 55.269, -4921.16 )
+
+[node name="Air54" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 212.043, -5450.56 )
+
+[node name="Air59" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 116.615, -5814.09 )
+
+[node name="Air63" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 96.1665, -6245.79 )
+
+[node name="Air3" parent="Airs" instance=ExtResource( 13 )]
 position = Vector2( 556.508, -855.963 )
 
-[node name="Air4" parent="Airs" instance=ExtResource( 6 )]
+[node name="Air17" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 577.435, -2258.33 )
+
+[node name="Air65" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 522.125, -2365.69 )
+
+[node name="Air71" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 622.985, -2964.35 )
+
+[node name="Air77" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 501.851, -1408.24 )
+
+[node name="Air9" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 596.164, -1620.23 )
+
+[node name="Air13" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 552.903, -2860.37 )
+
+[node name="Air19" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 623.337, -3367.04 )
+
+[node name="Air24" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 516.549, -3873.72 )
+
+[node name="Air33" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 664.235, -3864.63 )
+
+[node name="Air38" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 457.475, -4755.29 )
+
+[node name="Air41" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 457.475, -4753.01 )
+
+[node name="Air45" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 643.786, -5018.85 )
+
+[node name="Air49" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 446.115, -5091.55 )
+
+[node name="Air53" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 602.888, -5620.95 )
+
+[node name="Air58" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 507.461, -5984.48 )
+
+[node name="Air62" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 487.012, -6416.18 )
+
+[node name="Air4" parent="Airs" instance=ExtResource( 13 )]
 position = Vector2( 362.348, -435.108 )
 
-[node name="Air5" parent="Airs" instance=ExtResource( 6 )]
+[node name="Air18" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 404.905, -2079.01 )
+
+[node name="Air66" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 349.595, -2186.38 )
+
+[node name="Air72" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 450.455, -2785.03 )
+
+[node name="Air78" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 329.321, -1228.92 )
+
+[node name="Air10" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 365.953, -1502.2 )
+
+[node name="Air14" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 506.55, -2608.95 )
+
+[node name="Air23" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 576.984, -3115.63 )
+
+[node name="Air28" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 470.196, -3622.3 )
+
+[node name="Air31" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 617.882, -3613.21 )
+
+[node name="Air34" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 411.122, -4503.87 )
+
+[node name="Air39" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 411.122, -4501.6 )
+
+[node name="Air44" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 597.433, -4767.43 )
+
+[node name="Air48" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 399.762, -4840.14 )
+
+[node name="Air52" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 556.535, -5369.53 )
+
+[node name="Air56" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 461.108, -5733.06 )
+
+[node name="Air60" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 440.659, -6164.76 )
+
+[node name="Air5" parent="Airs" instance=ExtResource( 13 )]
 position = Vector2( 358.614, -325.31 )
 
+[node name="Air6" parent="Airs" instance=ExtResource( 13 )]
+position = Vector2( 535.261, -1208.55 )
+
 [node name="Powerups" type="Node2D" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 14 )
+autoplay = true
+max_distance = 6775.0
 [connection signal="update_air" from="Bubble" to="." method="_on_Bubble_update_air"]
+[connection signal="create_ball" from="Obstacles/Spawner" to="." method="_on_Spawner_create_ball"]

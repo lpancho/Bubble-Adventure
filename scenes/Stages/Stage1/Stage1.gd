@@ -8,7 +8,8 @@ func _ready():
 	pass # Replace with function body.
 
 func _process(delta):
-	gui.update_distance(player.distance)
+	if has_node("Bubble"):
+		gui.update_distance(player.distance)
 	pass
 
 func _on_Spawner_create_ball(scn, pos):
