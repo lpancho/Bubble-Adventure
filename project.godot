@@ -10,11 +10,23 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "RigidBody2D",
+"class": "Ball",
+"language": "GDScript",
+"path": "res://scenes/Obstacles/Ball/Ball.gd"
+}, {
+"base": "Area2D",
+"class": "Obstacle",
+"language": "GDScript",
+"path": "res://scenes/Obstacles/Obstacle.gd"
+}, {
+"base": "RigidBody2D",
 "class": "Player",
 "language": "GDScript",
 "path": "res://scenes/Bubble/Bubble.gd"
 } ]
 _global_script_class_icons={
+"Ball": "",
+"Obstacle": "",
 "Player": ""
 }
 
@@ -23,6 +35,10 @@ _global_script_class_icons={
 config/name="Bubbly Gubbly"
 run/main_scene="res://scenes/Menu/Menu.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Global="*res://scripts/global.gd"
 
 [display]
 

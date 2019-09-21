@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/Gui/GUI_Stage/GUI_Stage.gd" type="Script" id=1]
 [ext_resource path="res://assets/gui/gui_airscore.png" type="Texture" id=2]
+[ext_resource path="res://assets/gui/gui_sound-2.png" type="Texture" id=3]
+[ext_resource path="res://assets/gui/gui_sound-1.png" type="Texture" id=4]
 
 [node name="GUI_Stage" type="CanvasLayer"]
 offset = Vector2( 10, 10 )
@@ -9,6 +11,7 @@ transform = Transform2D( 1, 0, 0, 1, 10, 10 )
 script = ExtResource( 1 )
 
 [node name="TextureScore" type="TextureRect" parent="."]
+editor/display_folded = true
 margin_right = 40.0
 margin_bottom = 40.0
 texture = ExtResource( 2 )
@@ -31,3 +34,12 @@ margin_right = -164.255
 margin_bottom = 28.4401
 rect_scale = Vector2( 2, 2 )
 text = "Distance:"
+
+[node name="TextureSound" type="TextureButton" parent="."]
+margin_top = 70.9025
+margin_right = 150.0
+margin_bottom = 125.902
+toggle_mode = true
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+[connection signal="pressed" from="TextureSound" to="." method="_on_TextureSound_pressed"]

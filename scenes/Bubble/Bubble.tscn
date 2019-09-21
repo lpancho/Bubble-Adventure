@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/Bubble/Bubble.gd" type="Script" id=1]
 [ext_resource path="res://assets/bubbly/obj_bubble.png" type="Texture" id=2]
 [ext_resource path="res://assets/music-sfx/sfx_bubble.wav" type="AudioStream" id=3]
+[ext_resource path="res://assets/music-sfx/sfx_defeat.wav" type="AudioStream" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -10,6 +11,8 @@
 mode = 2
 mass = 0.01
 gravity_scale = -1.0
+contacts_reported = 1
+contact_monitor = true
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -24,9 +27,13 @@ shape = SubResource( 1 )
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 limit_left = 0
-limit_top = -6775
+limit_top = -20325
 limit_right = 720
 limit_bottom = 0
 
 [node name="sfx_increase_size" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 3 )
+
+[node name="sfx_lose" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+[connection signal="finished" from="sfx_lose" to="." method="_on_sfx_lose_finished"]

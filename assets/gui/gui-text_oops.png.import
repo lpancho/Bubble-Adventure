@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/gui_sound.png-f38f5107b90c4b9c0b8a71abc1d80236.stex"
+path="res://.import/gui-text_oops.png-1a8bac86a2664f8349173374142c1680.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gui/gui_sound.png"
-dest_files=[ "res://.import/gui_sound.png-f38f5107b90c4b9c0b8a71abc1d80236.stex" ]
+source_file="res://assets/gui/gui-text_oops.png"
+dest_files=[ "res://.import/gui-text_oops.png-1a8bac86a2664f8349173374142c1680.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sfx_defeat.wav-7e03253f6d8ebc303f5bb5e6328d0d9a.sample"
+
+[deps]
+
+source_file="res://assets/music-sfx/sfx_defeat.wav"
+dest_files=[ "res://.import/sfx_defeat.wav-7e03253f6d8ebc303f5bb5e6328d0d9a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
