@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/Bubble/Bubble.gd" type="Script" id=1]
-[ext_resource path="res://assets/bubbly/obj_bubble.png" type="Texture" id=2]
+[ext_resource path="res://assets/bubbly/Bubble - White.png" type="Texture" id=2]
 [ext_resource path="res://assets/music-sfx/sfx_bubble.wav" type="AudioStream" id=3]
 [ext_resource path="res://assets/music-sfx/sfx_defeat.wav" type="AudioStream" id=4]
 

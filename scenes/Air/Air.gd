@@ -6,3 +6,6 @@ func _on_Air_body_entered(body):
 		body.increase_size()
 		queue_free()
 	pass # Replace with function body.
+
+func _process(delta):
+	position += Vector2(rand_range(-1,1), rand_range(-1,1))

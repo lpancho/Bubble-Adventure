@@ -20,13 +20,17 @@ signal update_air
 signal show_end_game_lose
 signal show_end_game_win
 
+func _ready():
+#	$CollisionShape2D.disabled = false
+	pass
+
 func _input(event):
 	if event.is_action_pressed("click"):
-		var dis_start = position
-		var dis_end = get_global_mouse_position()
-		var dir = dis_start - dis_end
+		var dis_start = get_global_mouse_position()
+		var dis_end = position
+		var dir = (dis_end - dis_start).normalized() * Vector2(50,50)
 		apply_impulse(Vector2(), dir * FORCE)
-		print(dir * FORCE)
+		print(dir, (dis_end - dis_start).normalized())
 	pass
 
 func _physics_process(delta):
@@ -56,7 +60,7 @@ func dead():
 	if is_alive:
 		visible = false
 		is_alive = false
-		collision.disabled = true
+		call_deferred("collision.set_disabled", true)
 		linear_velocity = Vector2.ZERO
 		sfx_lose.play()
 
