@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scenes/Menu/Menu.gd" type="Script" id=1]
 [ext_resource path="res://assets/background/bg_gradient.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://assets/gui/obj_fish.png" type="Texture" id=9]
 [ext_resource path="res://scenes/Gui/Bubbles/Bubbles.tscn" type="PackedScene" id=10]
 [ext_resource path="res://assets/music-sfx/sfx_bubble.wav" type="AudioStream" id=11]
+[ext_resource path="res://assets/music-sfx/The Bard.ogg" type="AudioStream" id=12]
 
 [sub_resource type="Animation" id=1]
 resource_name = "show_fishes"
@@ -339,5 +340,9 @@ bubble_type = "SMALL"
 
 [node name="play_click" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 11 )
+
+[node name="bgm" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+autoplay = true
 [connection signal="pressed" from="tb_play" to="." method="_on_tb_play_pressed"]
 [connection signal="animation_finished" from="Anim_GUI" to="." method="_on_Anim_GUI_animation_finished"]

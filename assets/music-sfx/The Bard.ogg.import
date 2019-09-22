@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/The Bard.ogg-b7de90ec38b6313083f1ca587783ba61.oggstr"
+
+[deps]
+
+source_file="res://assets/music-sfx/The Bard.ogg"
+dest_files=[ "res://.import/The Bard.ogg-b7de90ec38b6313083f1ca587783ba61.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

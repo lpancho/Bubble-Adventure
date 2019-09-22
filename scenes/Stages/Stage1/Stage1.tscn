@@ -1465,10 +1465,9 @@ position = Vector2( 0, -20325 )
 [node name="Bubble" parent="." instance=ExtResource( 22 )]
 position = Vector2( 361.09, -35 )
 
-[node name="bgm" type="AudioStreamPlayer2D" parent="."]
+[node name="bgm" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 23 )
 autoplay = true
-max_distance = 20325.0
 
 [node name="Endgame" parent="." instance=ExtResource( 24 )]
 [connection signal="create_object" from="Obstacles/Spawner" to="." method="_on_Spawner_create_object"]
