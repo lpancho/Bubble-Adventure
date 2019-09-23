@@ -25,3 +25,7 @@ func show_lose(score):
 func _on_TryAgain_pressed():
 	get_tree().reload_current_scene()
 	pass # Replace with function body.
+
+func _on_Home_pressed():
+	get_tree().change_scene("res://scenes/Menu/Menu.tscn")
+	pass # Replace with function body.
